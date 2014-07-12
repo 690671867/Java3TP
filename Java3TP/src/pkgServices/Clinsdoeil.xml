@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.Clinsdoeil">
+
+    
+<!--     <insert id="addCmsPage" parameterType="CmsPage" useGeneratedKeys="true" keyProperty="id"> -->
+<!--         insert into cmspage (title, sefUrl_fr, sefUrl_en, content_fr, content_en, active) -->
+<!--             value (#{title}, #{sefUrlFr}, #{sefUrlEn}, #{contentFr}, #{contentEn}, #{active}) -->
+<!--     </insert> -->
+
+
+
+	<insert id="addClindoeil" parameterType="Clinsdoeil" useGeneratedKeys="true" keyProperty="clindoeilId">
+		insert into clinsdoeil (fromId, toId, dateenvoi)
+			value(#{fromId}, #{toId}, #{dateEnvoi})
+	</insert>
+
+	<select id="getNombresClinsRecu" resultType="Integer" parameterType="Integer">
+		select count(*)
+		from clinsdoeil
+		where toId = #{toId}
+	</select>
+
+
+<!-- 	<select id="getListeDeMarques" resultMap="MarqueMap"> -->
+<!-- 		select *, v.marqueID as "v_marqueID" , m.marqueID as "m_marqueID" -->
+<!-- 		from marques m  -->
+<!-- 		left join vehicules v  -->
+<!-- 		on( m.marqueID = v.marqueID) -->
+<!-- 	</select> -->
+
+<!-- 	<select id="getVehiculesByMarqueID" parameterType="Integer" resultType="Marque"> -->
+<!-- 		select * from marques -->
+<!-- 		where marqueID = #{marqueID} -->
+<!-- 	</select> -->
+
+<!-- 	<select id="getVehiculesByMarqueID" parameterType="Integer" resultType="Vehicule"> -->
+		
+<!-- 	</select> -->
+
+</mapper>

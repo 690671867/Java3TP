@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.Membre">
+	<resultMap type="Membre" id="MembreMap" >
+		<id column="membreId" property="membreId"/>
+		<result column="nom" property="nom"/>
+		<result column="prenom" property="prenom"/>
+		<result column="description" property="description"/>
+		<result column="pseudo" property="pseudo"/>
+		<result column="password" property="password"/>
+		<result column="age" property="age"/>
+		<result column="email" property="email"/>
+		<result column="sexe" property="sexe"/>
+		<result column="isOnline" property="isOnline"/>
+		<result column="smoke" property="smoke"/>
+		<result column="height" property="height"/>
+		<result column="lastVisit" property="lastVisit"/>
+		
+		<association property="categorie" javaType="Categorie">
+			<id column="categorieID" property="categorieID"/>
+			<result column="categorie_description" property="description"/>
+		</association>
+		
+		<association property="niveauMembre" javaType="NiveauMembre">
+			<id column="niveauMembreId" property="id"/>
+			<result column="niveau_description" property="description"/>
+			<result column="nbPhotosMax" property="nbPhotosMax"/>
+			<result column="nbFavorisMax" property="nbFavorisMax"/>
+			<result column="droitEnvoyerMag" property="droitEnvoyerMag"/>
+		</association>	
+		
+		
+			
+	</resultMap>
+	
+
+<!-- 	private HairColor hairColor; -->
+<!-- 	private SkinColor skinColor; -->
+<!-- 	private EyeColor eyeColor; -->
+<!-- 	private WeightRange weightRange; -->
+<!-- 	private City city; -->
+<!-- 	private Status status; -->
+	
+<!-- 	private ArrayList<Favoris> listeFavoris; -->
+<!-- 	private ArrayList<Hobby> listeHobbies; -->
+<!-- 	private ArrayList<Photo> listePhotos; -->
+<!-- 	private ArrayList<Message> listeMessages; -->
+
+
+
+	<select id="getTousLesMembres" resultMap="MembreMap">
+		select *, c.description as "categorie_description" , n.description as "niveau_description"
+		from membre m
+		left join categorie c on(m.categorieId = c. categorieId)
+		left join niveaumembres n on (m.niveauMembreId = n.niveauMembreId)
+		
+	</select>
+	
+	
+	
+
+	
+	
+	
+	
+<!-- 	<insert id="addFavoris" parameterType="hashmap"> -->
+<!-- 		insert into favoris (dateAjout, membreFavorisant, membreFavorise) -->
+<!-- 			values (#{keyDateAjout}, #{keyMembreFavorisant}, #{keyMembreFavorise}) -->
+<!-- 	</insert> -->
+	
+<!-- 	<delete id="deleteFavoris" parameterType="hashmap"> -->
+<!-- 		delete from favoris -->
+<!-- 		where membreFavorisant= #{keyMembreFavorisant} and membreFavorise=#{keyMembreFavorise} -->
+<!-- 	</delete> -->
+	
+<!-- 	<select id="getFavorisByMembers" parameterType="hashmap" resultType="Integer"> -->
+<!-- 		select count(*) from favoris -->
+<!-- 		where membreFavorisant=#{keyMembreFavorisant} and membreFavorise=#{keyMembreFavorise} -->
+<!-- 	</select> -->
+	
+	
+</mapper>
