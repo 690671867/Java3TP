@@ -1,27 +1,27 @@
 Profile.xhtml:
 
 1- get user par pseudo
-2- liste de favoris online
-3- get photo profile user par id du user
-4- liste de messages recus du user par id du user
-5- liste de messages envoyes par le user par id du user
-6- liste des favoris
-7- liste clin d'oiel par user id
-8- liste de photos du user par id
-9- get user par id
+2- liste de favoris online  =  				FavorisManager.getListeFavorisOnline(membre.getMembreId());
+3- get photo profile user par id du user = 		PhotoManager.getProfilPhoto(membre.getMembreId());
+4- liste de messages recus du user par id du user = 	MessageManager.getListeMessagesRecus(membre.getMembreId());
+5- liste de messages envoyes par le user par id du user = MessageManager.getListeMessagesEnvoyes(membre.getMembreId());
+6- liste des favoris =  				FavorisManager.getListeFavoris(membre.getMembreId());
+7- liste clin d'oiel par user id Clin=			
+8- liste de photos du user par id=
+9- get user par id=
 
 
 recherche.xhtml:
 
-9- liste de categories
-10- liste de hair colors
-11- liste de skin color
-12- liste de eye color
-13- liste de height range
-14- liste de weight range
-15- liste de villes
-16- liste de hobbies
-17- liste de status  
+9- liste de categories = CategorieManager.getListeCategories();
+10- liste de hair colors = HairColorManager.getListeHairColors();
+11- liste de skin color= SkinColorManager.getListeSkinColors();
+12- liste de eye color= EyeColorManager.getListeEyeColors();
+13- liste de height range = HeightRangeManager.getListeHeightRanges();
+14- liste de weight range = WeightRangeManager.getListeWeightRanges();
+15- liste de villes= CityManager.getListeCities();
+16- liste de hobbies = HobbyManager.getListeHobbies();
+17- liste de status = StatusManager.getListeStatus();  
 
 
 favoris.xhtml:
@@ -30,6 +30,6 @@ favoris.xhtml:
 19- insert clin d'oeil(user id, user id)
 
 
-profilestrouves.xhtml:
+resultatrecherche.xhtml:
 
 20-liste de users par attributs de la recherche(criteria)
