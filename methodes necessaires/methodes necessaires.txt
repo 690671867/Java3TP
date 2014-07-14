@@ -6,8 +6,10 @@ Profile.xhtml:
 4- liste de messages recus du user par id du user
 5- liste de messages envoyes par le user par id du user
 6- liste des favoris
-7- liste clin d'oil par user id
+7- liste clin d'oiel par user id
 8- liste de photos du user par id
+9- get user par id
+
 
 recherche.xhtml:
 
@@ -19,4 +21,15 @@ recherche.xhtml:
 14- liste de weight range
 15- liste de villes
 16- liste de hobbies
-17- liste de status   
+17- liste de status  
+
+
+favoris.xhtml:
+
+18- delete user 
+19- insert clin d'oeil(user id, user id)
+
+
+profilestrouves.xhtml:
+
+20-liste de users par attributs de la recherche(criteria)
