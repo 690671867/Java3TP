@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.HairColor">
+	
+	<select id="getListeHairColors" resultType="HairColor">
+		select * from hair_color
+	</select>
+	
+	<select id="getListeHairColorById" parameterType="Integer" resultType="HairColor">
+		select * from hair_color
+		where id=#{id}
+	</select>
+	
+
+</mapper>
