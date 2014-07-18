@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:icecore="http://www.icefaces.org/icefaces/core"
+        xmlns:ace="http://www.icefaces.org/icefaces/components"
+        xmlns:ice="http://www.icesoft.com/icefaces/component"
+    >
+       <h:head>
+        <title>Welcomme</title>
+        <ice:outputStyle href="./xmlhttp/css/rime/rime.css" />
+    </h:head>
+    <h:body>
+        <ace:panel header="List de  Vehicules">
+        <ice:form>
+         <ace:dataTable value="#{vehiculesBackingBean.listeVehicules}" var="vehicule">
+	         	
+				<ace:column headerText="No.">
+	
+						<ice:outputLabel value="#{vehicule.no}"></ice:outputLabel>
+					</ace:column> 
+					<ace:column headerText="NoSerie">
+					
+						<ice:outputLabel value="#{vehicule.noSerie}"></ice:outputLabel>
+					
+					</ace:column>
+					<ace:column headerText="Annee">
+					
+						<ice:outputLabel value="#{vehicule.annee}"></ice:outputLabel>
+					
+					</ace:column>
+					<ace:column headerText="Prix">
+					
+						<ice:outputLabel value="#{vehicule.prix}"></ice:outputLabel>
+					
+					</ace:column>
+					<ace:column headerText="MarqueID">
+					
+						<ice:outputLabel value="#{vehicule.marqueID}"></ice:outputLabel>
+					
+					</ace:column>
+					   <ace:column headerText="Mise à jour">
+      						<ice:panelGrid columns="3">
+      							<ice:commandLink value="Modifier" action="formModifier">
+      								<f:setPropertyActionListener target="#{modifierVehiculeBackingBean.vehicule}" value="#{vehicule}" />
+      							</ice:commandLink>
+      							
+      							<ice:commandLink value="Adjouter" action="formAdjouter">
+      								<f:setPropertyActionListener target="#{nouveauVehiculeBackingBean.vehicule}" value="#{vehicule}" />
+      							</ice:commandLink>
+      							
+      							<h:commandLink value="Supprimer" onclick="confirm#{vehicule.marqueID}.show();" type="button" >
+      								<f:setPropertyActionListener target="#{supprimerBackingBean.vehicule}" value="#{vehicule}" />
+      							</h:commandLink>
+      							
+      						</ice:panelGrid>
+						<ace:confirmationDialog id="boiteConfirm"
+                                    widgetVar="confirm#{vehicule.marqueID}"
+                                    message=" Êtes-vous sûr de vouloir supprimer le Vehicule #{vehicule.marqueID} ayant le id #{vehicule.marqueID} ?"
+                                    header="Confirmation"
+                                    width="450"
+                                    height="200"
+                                    closable="true"
+                                    position="center"
+                                    
+                                    >
+                				<h:panelGrid columns="2">
+                    				<h:commandButton id="yes" value="Oui" onclick="confirm#{vehicule.marqueID}.hide()" actionListener="#{supprimerBackingBean.ecouteurBoutonYes}"/>
+                    				<h:commandButton id="no" value="Non" onclick="confirm#{vehicule.marqueID}.hide()" />
+                				</h:panelGrid>
+            			</ace:confirmationDialog>
+            			
+      				</ace:column>
+				        
+         </ace:dataTable>
+        
+         </ice:form>
+         </ace:panel>
+    </h:body>
+</html>

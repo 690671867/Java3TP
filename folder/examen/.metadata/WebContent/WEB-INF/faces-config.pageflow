@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14002422846190" configfile="/examen/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="122" y="178" id="pf14002456670961" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14002456670962" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="marques.xhtml" x="338" y="178" id="pf14002456670973" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" outlinks="pf14002483567874 pf14002496950887" inlinks="pf14002456670962 pf14002491675906 pf14002497765249" path="/marques.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="modifier.xhtml" x="624" y="178" id="pf14002483567875" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf14002491675906" inlinks="pf14002483567874" path="/modifier.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="adjouterVehicule.xhtml" x="840" y="48" id="pf14002496950888" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf14002497765249" inlinks="pf14002496950887" path="/adjouterVehicule.xhtml"/>
+  <links id="pf14002456670962" target="pf14002456670973" source="pf14002456670961"/>
+  <links id="pf14002483567874" target="pf14002483567875" source="pf14002456670973"/>
+  <links id="pf14002491675906" target="pf14002456670973" source="pf14002483567875"/>
+  <links id="pf14002496950887" target="pf14002496950888" source="pf14002456670973"/>
+  <links id="pf14002497765249" target="pf14002456670973" source="pf14002496950888"/>
+</pageflow:Pageflow>

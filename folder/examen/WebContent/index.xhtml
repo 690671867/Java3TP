@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:icecore="http://www.icefaces.org/icefaces/core"
+        xmlns:ace="http://www.icefaces.org/icefaces/components"
+        xmlns:ice="http://www.icesoft.com/icefaces/component"
+    >
+       <h:head>
+        <title>Welcomme</title>
+        <ice:outputStyle href="./xmlhttp/css/rime/rime.css" />
+    </h:head>
+    <h:body>
+        <ace:panel header="List de marques de Vehicules">
+        <ice:form>
+         <ace:dataTable value="#{marquesBackingBean.listeMarques}" var="marque">
+	         	
+				<ace:column headerText="ID">
+					
+				
+							<ice:commandLink value="#{marque.marqueID} " action="#{vehiculesBackingBean.listVehicule}" >
+								<f:setPropertyActionListener value="#{marque.marqueID}" target="#{vehiculesBackingBean.marqueID}"></f:setPropertyActionListener>
+							</ice:commandLink>
+					
+					</ace:column>
+					<ace:column headerText="Marques">
+					
+						<ice:outputLabel value="#{marque.marques}"></ice:outputLabel>
+					
+				      </ace:column>   
+         </ace:dataTable>
+         </ice:form>
+         </ace:panel>
+    </h:body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:icecore="http://www.icefaces.org/icefaces/core"
+        xmlns:ace="http://www.icefaces.org/icefaces/components"
+        xmlns:ice="http://www.icesoft.com/icefaces/component"
+    >
+    <h:head>
+        <title>Nouveau Vehicule</title>
+        <ice:outputStyle href="css/style.css" />
+    </h:head>
+    <h:body>
+       <h:form id="formConn">
+      			 <ace:panel header="Ajouter un nouveau vehicule">
+      			 <h:panelGrid columns="4">
+      			 
+      			
+      			
+        			<ice:outputLabel value="No"></ice:outputLabel>
+        			<ice:inputText id="no" value="#{nouveauVehiculeBackingBean.no}" >
+        			</ice:inputText>
+        	
+        			
+        			<ice:outputLabel value="NoSerie"></ice:outputLabel>
+        			<ice:inputText id="noSerie" value="#{nouveauVehiculeBackingBean.noSerie}">
+        			</ice:inputText>
+        	
+        		
+        			<ice:outputLabel value="Annee"></ice:outputLabel>
+        			<ice:inputText id="annee" value="#{nouveauVehiculeBackingBean.annee}" >
+        			</ice:inputText>
+        		
+        			
+        			<ice:outputLabel value="Prix"></ice:outputLabel>
+        			<ice:inputText id="prix" value="#{nouveauVehiculeBackingBean.prix}">
+        			</ice:inputText>
+        		
+        			
+        			<ice:outputLabel value="MarqueID"></ice:outputLabel>
+        			<ice:inputText id="marqueID" value="#{nouveauVehiculeBackingBean.marqueID}">
+        			</ice:inputText>
+        		
+        			
+        			<ice:commandButton value="Sauvegarder" action="#{nouveauVehiculeBackingBean.sauvegarder}"></ice:commandButton>
+     			</h:panelGrid>
+    		</ace:panel>
+
+    </h:form>
+    </h:body>
+    </html>
