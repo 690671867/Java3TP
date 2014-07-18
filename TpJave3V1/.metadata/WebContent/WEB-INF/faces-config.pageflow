@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14056257201460" configfile="/TpJave3V1/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="96" y="240" width="97" height="133" id="pf14056277780051" outlinks="pf14056282757482" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="profile.xhtml" x="252" y="240" width="97" height="121" id="pf14056282757483" outlinks="pf14056320183984 pf14056324870576 pf14056329393938 pf14056329393939 pf140563391569712 pf140563391569713 pf140563391569714 pf140563391569715" inlinks="pf14056282757482 pf140563895279320 pf140564210741728 pf140564894903936" path="/profile.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="profileami.xhtml" x="276" y="96" width="73" height="97" id="pf14056320183985" inlinks="pf14056320183984 pf140563895279321 pf140564210741729 pf140564894903937" path="/profileami.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="amis en ligne.xhtml" x="588" y="30" width="97" height="85" id="pf14056324870577" outlinks="pf140563895279320 pf140563895279322 pf140563895279321 pf140563895279323 pf140563895279324 pf140563895279325 pf140563895279326 pf140563895279327" inlinks="pf14056324870576 pf140564210741730" path="/amis en ligne.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="messages.xhtml" x="720" y="168" width="97" height="109" id="pf140563293939310" outlinks="pf140564894903938 pf140564894903939 pf140564894903940 pf140564894903941 pf140564894903936 pf140564894903937" inlinks="pf14056329393938 pf140563895279322 pf140564210741731" path="/messages.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="cleind'oeil.xhtml" x="138" y="36" width="85" height="121" id="pf140563293939311" inlinks="pf14056329393939 pf140563895279323 pf140564210741732" path="/cleind'oeil.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="favorits.xhtml" x="378" y="408" width="73" height="121" id="pf140563391569716" outlinks="pf140564210741728 pf140564210741732 pf140564210741729 pf140564210741730 pf140564210741731 pf140564210741733 pf140564210741734 pf140564210741735" inlinks="pf140563391569712 pf140563895279327 pf140564894903941" path="/favorits.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="recherche.xhtml" x="528" y="408" width="97" height="133" id="pf140563391569717" inlinks="pf140563391569713 pf140563895279326 pf140564210741735 pf140564894903940" path="/recherche.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="mypictures.xhtml" x="648" y="402" width="109" height="133" id="pf140563391569718" inlinks="pf140563391569714 pf140563895279325 pf140564210741734 pf140564894903939" path="/mypictures.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="configuration.xhtml" x="732" y="312" width="121" height="157" id="pf140563391569719" inlinks="pf140563391569715 pf140563895279324 pf140564210741733 pf140564894903938" path="/configuration.xhtml"/>
+  <links id="pf14056282757482" target="pf14056282757483" source="pf14056277780051" outcome="oui" redirect="true"/>
+  <links id="pf14056320183984" target="pf14056320183985" source="pf14056282757483" outcome="membre" redirect="true"/>
+  <links id="pf14056324870576" target="pf14056324870577" source="pf14056282757483" outcome="amisonline" redirect="true"/>
+  <links id="pf14056329393938" target="pf140563293939310" source="pf14056282757483" outcome="messages" redirect="true"/>
+  <links id="pf14056329393939" target="pf140563293939311" source="pf14056282757483" outcome="clins" redirect="true"/>
+  <links id="pf140563391569712" target="pf140563391569716" source="pf14056282757483" outcome="favoris" redirect="true"/>
+  <links id="pf140563391569713" target="pf140563391569717" source="pf14056282757483" outcome="recherche" redirect="true"/>
+  <links id="pf140563391569714" target="pf140563391569718" source="pf14056282757483" outcome="photos" redirect="true"/>
+  <links id="pf140563391569715" target="pf140563391569719" source="pf14056282757483" outcome="configs" redirect="true"/>
+  <links id="pf140563895279320" target="pf14056282757483" source="pf14056324870577" outcome="tableau" redirect="true"/>
+  <links id="pf140563895279322" target="pf140563293939310" source="pf14056324870577" outcome="messages" redirect="true"/>
+  <links id="pf140563895279321" target="pf14056320183985" source="pf14056324870577" outcome="membre" redirect="true"/>
+  <links id="pf140563895279323" target="pf140563293939311" source="pf14056324870577" outcome="clins" redirect="true"/>
+  <links id="pf140563895279324" target="pf140563391569719" source="pf14056324870577" outcome="configs" redirect="true"/>
+  <links id="pf140563895279325" target="pf140563391569718" source="pf14056324870577" outcome="photos" redirect="true"/>
+  <links id="pf140563895279326" target="pf140563391569717" source="pf14056324870577" outcome="recherche" redirect="true"/>
+  <links id="pf140563895279327" target="pf140563391569716" source="pf14056324870577" outcome="favoris"/>
+  <links id="pf140564210741728" target="pf14056282757483" source="pf140563391569716" outcome="tableau" redirect="true"/>
+  <links id="pf140564210741732" target="pf140563293939311" source="pf140563391569716" outcome="clins" redirect="true"/>
+  <links id="pf140564210741729" target="pf14056320183985" source="pf140563391569716" outcome="membre" redirect="true"/>
+  <links id="pf140564210741730" target="pf14056324870577" source="pf140563391569716" outcome="amisonline" redirect="true"/>
+  <links id="pf140564210741731" target="pf140563293939310" source="pf140563391569716" outcome="messages" redirect="true"/>
+  <links id="pf140564210741733" target="pf140563391569719" source="pf140563391569716" outcome="configs" redirect="true"/>
+  <links id="pf140564210741734" target="pf140563391569718" source="pf140563391569716" outcome="photos" redirect="true"/>
+  <links id="pf140564210741735" target="pf140563391569717" source="pf140563391569716" outcome="recherche" redirect="true"/>
+  <links id="pf140564894903938" target="pf140563391569719" source="pf140563293939310" outcome="configs" redirect="true"/>
+  <links id="pf140564894903939" target="pf140563391569718" source="pf140563293939310" outcome="photos" redirect="true"/>
+  <links id="pf140564894903940" target="pf140563391569717" source="pf140563293939310" outcome="recherche" redirect="true"/>
+  <links id="pf140564894903941" target="pf140563391569716" source="pf140563293939310" outcome="favoris" redirect="true"/>
+  <links id="pf140564894903936" target="pf14056282757483" source="pf140563293939310" outcome="tableau" redirect="true"/>
+  <links id="pf140564894903937" target="pf14056320183985" source="pf140563293939310" outcome="membre" redirect="true"/>
+</pageflow:Pageflow>

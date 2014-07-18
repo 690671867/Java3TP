@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.City">
+	
+	<select id="getListeCities" resultType="City">
+		select * from city
+	</select>
+	
+	
+	<select id="getCityById" parameterType="Integer" resultType="City">
+		select * from city
+		where id=#{id}
+	</select>
+
+	<select id="getCityByMemberId" parameterType="Integer" resultType="City">
+		SELECT h.id, h.nom 
+		FROM membre m
+		LEFT JOIN city h ON (m.city_id = h.id)
+		WHERE membreid = #{id}
+	</select>
+</mapper>
